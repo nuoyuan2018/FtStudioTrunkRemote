@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.ftoutiao.account.android.activity.bill.BillingDetailsActivity">
+
+    <include layout="@layout/actionbar_default" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="-3dp"
+        android:background="@drawable/hdpi_pic"
+        android:gravity="center"
+        android:paddingTop="-3dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_marginBottom="2dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="总支出"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="总收入"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="结余"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_marginTop="3dp">
+
+            <TextView
+                android:id="@+id/txt_total_out"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/txt_total_input"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="1.255255"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/txt_total"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="122222"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+        </TableRow>
+
+    </TableLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <cn.ftoutiao.account.android.activity.bill.test.PinnedHeaderExpandableListView
+            android:id="@+id/explistview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+            android:choiceMode="singleChoice"
+            android:dividerHeight="0dp"
+            android:fastScrollEnabled="false"
+            android:footerDividersEnabled="true"
+            android:groupIndicator="@null"
+            android:scrollbars="none"
+            android:scrollingCache="true"
+            app:collaps_enable="true" />
+
+        <LinearLayout
+            android:id="@+id/line_no_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="vertical"
+          >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-60dp"
+                android:src="@drawable/icon_view_holder" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="@string/not_detail_tip"
+                android:textColor="@color/text_999999"
+                android:textSize="@dimen/sp_14" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+
+</LinearLayout>

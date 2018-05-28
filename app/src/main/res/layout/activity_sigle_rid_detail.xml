@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.ftoutiao.account.android.activity.bill.SingleRidDetailActivity">
+
+
+    <include layout="@layout/actionbar_default" />
+
+    <View
+        android:id="@+id/view"
+        style="@style/horizontal_line_no_padding"
+        android:layout_height="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/line_tips"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <LinearLayout
+        android:id="@+id/line_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/fra_float"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view">
+
+        <TextView
+            android:id="@+id/txt_monthtips"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:text="2018年03月总支出"
+            android:textColor="@color/h10"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_monthtips_value"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:gravity="center|right"
+            android:paddingRight="18dp"
+            android:textColor="@color/h10"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/fra_float"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_tips">
+
+
+        <com.acmenxd.recyclerview.SSwipeRefreshLayout
+            android:id="@+id/refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycleView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                android:id="@+id/view_holder"
+                layout="@layout/view_null_holder" />
+        </com.acmenxd.recyclerview.SSwipeRefreshLayout>
+
+        <com.acmenxd.recyclerview.group.GroupHeadLayout
+            android:id="@+id/fragment_bill_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!--<include-->
+        <!--android:id="@+id/view_holder"-->
+        <!--layout="@layout/view_null_holder" />-->
+        <LinearLayout
+            android:id="@+id/line_no_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/icon_view_holder" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="每一笔账单,都是生活的点滴"
+                android:textColor="@color/text_999999"
+                android:textSize="@dimen/sp_14" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+
+</android.support.constraint.ConstraintLayout>

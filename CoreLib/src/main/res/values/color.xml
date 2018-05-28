@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryDark">#000</color>
+    <color name="transparent">#00000000</color>
+    <color name="halftransparent">#6f000000</color>
+
+    <color name="nydialog_color_9999">#999999</color>
+    <!-- dialogs color -->
+    <color name="order_textview_color_border">#EBEBEB</color>
+    <color name="order_textview_color_normal_right">#999</color>
+    <color name="xiaonuo_dialog_cancletextcolor">#FFFFFF</color>
+    <color name="xiaonuo_dialog_confirmtextcolor">#503214</color>
+    <color name="main_color_white">#ffffffff</color>
+    <color name="loan_butBackground">#ed6d48</color>
+    <color name="color_hei_8">#7F000000</color>
+    <color name="color_e2e2e2">#e2e2e2</color>
+    <color name="color_00B0FF">#00B0FF</color>
+    <color name="color_f8f8f8">#f8f8f8</color>
+    <color name="color_d2d2d2">#d2d2d2</color>
+
+    <color name="assert_dialog_color">#CD2823</color>
+    <color name="text_white">#FFFFFF</color>
+    <color name="text_black">#000000</color>
+    <color name="text_gray">#5e5244</color>
+    <color name="text_gray2">#999999</color>
+    <color name="text_gray3">#aeacac</color>
+    <color name="text_gray4">#cccccc</color>
+    <color name="text_gray5">#d5d5d5</color>
+    <color name="text_blue">#2c52df</color>
+    <color name="text_orange">#FFA500</color>
+    <color name="text_green">#FFA500</color>
+    <color name="text_red">#fb3232</color>
+    <color name="text_ffa800">#ffa800</color>
+    <color name="text_ff8800">#ff8800</color>
+    <color name="text_6d7276">#6d7276</color>
+    <color name="text_ff7200">#ff7200</color>
+    <color name="text_ff7202">#ff7202</color>
+    <color name="text_ffd2b1">#FFD2B1</color>
+    <color name="text_aeaeae">#aeaeae</color>
+    <color name="text_2f2f2f">#2f2f2f</color>
+    <color name="text_909090">#909090</color>
+    <color name="text_646464">#646464</color>
+    <color name="text_a5a5a5">#A5A5A5</color>
+    <color name="text_d7d7d7">#d7d7d7</color>
+    <color name="text_b6b6b6">#b6b6b6</color>
+    <color name="text_a0a0a0">#a0a0a0</color>
+    <color name="text_503214">#503214</color>
+    <color name="text_503216">#503216</color>
+    <color name="text_333333">#333333</color>
+    <color name="text_cd282c">#cd282c</color>
+    <color name="text_666666">#666666</color>
+    <color name="text_c0a78a">#c0a78a</color>
+    <color name="text_999999">#999999</color>
+    <color name="text_2a3776">#2a3776</color>
+    <color name="line_divine">#eeeeee</color>
+    <color name="text_a1816f">#A18A6F</color>
+    <color name="text_8f8e94">#8F8E94</color>
+    <color name="text_cbcbcb">#cbcbcb</color>
+    <color name="text_divide_line">#DEDEE0</color>
+</resources>

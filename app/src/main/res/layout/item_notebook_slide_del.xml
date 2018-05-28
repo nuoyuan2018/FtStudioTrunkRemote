@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <View
+            android:id="@+id/view_decorator"
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/img_editor_del"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@id/view_decorator"
+            android:padding="12dp"
+            android:src="@drawable/editer_del"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/img_bg"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/img_editor_del"
+            android:src="@drawable/ic_avatar"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="8dp"
+            android:layout_toRightOf="@+id/img_bg"
+            android:gravity="center|left"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center"
+                    android:text="title"
+                    android:textSize="@dimen/text_15sp"
+                    android:textColor="@color/color_1111" />
+
+                <TextView
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:id="@+id/txt_is_own"
+                    android:layout_width="34dp"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:background="@drawable/owen_green_border"
+                    android:text="管理员"
+                    android:textColor="@color/color_49cb99"
+                    android:textSize="9sp" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_marginTop="2dp"
+                android:id="@+id/txt_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:singleLine="true"
+                android:text="value"
+                android:textColor="@color/h17"
+                android:textSize="@dimen/sp_12" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_editor"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="14dp"
+            android:src="@drawable/book_editor_nor"
+           />
+
+        <View
+            style="@style/horizontal_line"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+
+</LinearLayout>

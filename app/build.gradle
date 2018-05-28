@@ -1,0 +1,139 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+// GreenDao Config
+apply plugin: 'org.greenrobot.greendao'
+
+android {
+
+
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+    compileSdkVersion globalConfiguration["androidCompileSdkVersion"]
+    buildToolsVersion globalConfiguration["androidBuildToolsVersion"]
+
+    defaultConfig {
+        applicationId "cn.ftoutiao.account.android"
+        minSdkVersion globalConfiguration["androidMinSdkVersion"]
+        targetSdkVersion globalConfiguration["androidTargetSdkVersion"]
+        versionCode 2
+        versionName "1.0.1"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                // EventBus Config
+                arguments = [eventBusIndex: 'cn.ftoutiao.account.android.MyEventBusIndex']
+                includeCompileClasspath true
+            }
+        }
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+    }
+
+
+
+
+    signingConfigs {
+        releaseConfig {
+            storeFile file("../jks/accountbookKey.jks")
+            storePassword "ftoutiao*&account"
+            keyAlias "accountbookKey"
+            keyPassword "ftoutiao*&account"
+            v2SigningEnabled false
+        }
+
+    }
+
+
+    buildTypes {
+        debug {
+            buildConfigField "boolean", "MAIN_DEBUG", "true" // 调试总开关
+            minifyEnabled false     //混淆
+            zipAlignEnabled false   //zipalign压缩对齐
+            shrinkResources false   //移除无用的资源
+            //前一部分代表系统默认的android程序的混淆文件，该文件已经包含了基本的混淆声明，后一个文件是自己的定义混淆文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.releaseConfig //debug签名配置
+        }
+        release {
+            buildConfigField "boolean", "MAIN_DEBUG", "false" // 调试总开关
+            minifyEnabled false     //混淆
+            zipAlignEnabled false   //zipalign压缩对齐
+            shrinkResources false   //移除无用的资源
+            //前一部分代表系统默认的android程序的混淆文件，该文件已经包含了基本的混淆声明，后一个文件是自己的定义混淆文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.releaseConfig //release签名配置
+        }
+
+
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            def newName
+            newName = 'Htun_1.0.0_'+ BuildTime() + variant.buildType.name + '.apk'
+            outputFileName = newName
+        }
+    }
+
+    sourceSets {
+        main {
+            java.srcDirs = ['src/main/java', 'src/main/java']
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+
+    //rx 多个地方引用
+    packagingOptions {
+        exclude 'META-INF/NOTICE'
+    }
+
+
+}
+
+
+def BuildTime() {
+    return new Date().format("MMddHH", TimeZone.getTimeZone("GMT+0800"))
+}
+
+
+greendao {
+    /**
+     * 数据库版本号不能降低,会导致App无法安装
+     * 数据库字段发生变更或新增表时,更新这个版本号,运行Make Project
+     * 版本号历史:
+     * 1:2016年11月21日13:32:33 - > 创建初始库和表
+     */
+    schemaVersion 1
+    daoPackage 'cn.ftoutiao.account.android.db.dao'//生成的dao文件存放路径
+    targetGenDir 'src/main/java'//自定义生成数据库文件的目录，可以将生成的文件放到我们的java目录中，而不是build中，这样就不用额外的设置资源目录了
+}
+
+
+dependencies {
+    def ftoutiaoDependencies = rootProject.ext.ftoutiaoDependencies
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation 'commons-codec:commons-codec:1.10'
+    implementation ftoutiaoDependencies.eventbus
+    implementation ftoutiaoDependencies.eventbusannotation
+    implementation ftoutiaoDependencies.easyPermissions
+    implementation ftoutiaoDependencies.design
+    implementation ftoutiaoDependencies.greendao
+    implementation ftoutiaoDependencies.debugdb
+    implementation ftoutiaoDependencies.constraint
+    implementation ftoutiaoDependencies.indicatorview
+    implementation ftoutiaoDependencies.mutidex
+    //compile 'com.umeng.sdk:common:latest.integration'
+    //compile 'com.umeng.sdk:analytics:latest.integration'
+    //compile 'com.umeng.sdk:debug:1.0.0'
+   // implementation project(':push')
+    implementation project(':ComponentLib')
+}

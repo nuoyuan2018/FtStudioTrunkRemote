@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.ftoutiao.account.android.activity.mine.ModifyNIckNameActivity">
+
+    <include layout="@layout/actionbar_default" />
+
+
+    <cn.ftoutiao.account.android.widget.ClearEditText
+        android:id="@+id/et_nickname_modify"
+        style="@style/InputTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginRight="3dp"
+        android:hint="@string/uc_please_input_nickname"
+        android:paddingLeft="15dp"
+        app:clearButtonDrawable="@drawable/clear_button"
+        app:clearButtonMode="whileEditing" />
+
+    <View style="@style/horizontal_line_no_padding" />
+
+
+</LinearLayout>

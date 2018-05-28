@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/circle_bg">
+
+
+    <LinearLayout
+        android:id="@+id/dialog_layout"
+        android:layout_width="310dp"
+        android:layout_height="350dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dialog_tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="发现新版本"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dialog_update_tvVersion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="最新版本："
+                android:textColor="@color/text_666666"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/dialog_update_tvSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="新版本大小："
+                android:textColor="@color/text_666666"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="更新内容"
+                android:textColor="@color/text_333333"
+                android:textSize="14sp"/>
+
+            <LinearLayout
+                android:id="@+id/dialog_layout_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingBottom="6dp"
+                    android:paddingTop="6dp">
+
+                    <TextView
+                        android:id="@+id/dialog_update_tvContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_666666"
+                        android:textSize="12sp"/>
+                </ScrollView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/dialog_btnLine1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#EEEEEE"/>
+
+        <LinearLayout
+            android:id="@+id/dialog_layout_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/dialog_btn2"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="取消"
+                android:textColor="@color/color_ff6f00"
+                android:textSize="17sp"/>
+
+            <View
+                android:id="@+id/dialog_btnLine2"
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="#EEEEEE"/>
+
+            <Button
+                android:id="@+id/dialog_btn1"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="立即更新"
+                android:textColor="@color/color_ff6f00"
+                android:textSize="17sp"/>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

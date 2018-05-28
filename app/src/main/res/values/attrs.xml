@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--sliding tab attrs-->
+    <declare-styleable name="stl_SmartTabLayout">
+        <attr name="stl_indicatorAlwaysInCenter" format="boolean" />
+        <attr name="stl_indicatorWithoutPadding" format="boolean" />
+        <attr name="stl_indicatorInFront" format="boolean" />
+        <attr name="stl_indicatorInterpolation" format="enum">
+            <enum name="smart" value="0" />
+            <enum name="linear" value="1" />
+        </attr>
+        <attr name="stl_indicatorGravity" format="enum">
+            <enum name="bottom" value="0" />
+            <enum name="top" value="1" />
+            <enum name="center" value="2" />
+        </attr>
+        <attr name="stl_indicatorColor" format="color" />
+        <attr name="stl_indicatorColors" format="reference" />
+        <attr name="stl_indicatorThickness" format="dimension" />
+        <attr name="stl_indicatorWidth" format="dimension">
+            <enum name="auto" value="-1" />
+        </attr>
+        <attr name="stl_indicatorCornerRadius" format="dimension" />
+        <attr name="stl_overlineColor" format="color" />
+        <attr name="stl_overlineThickness" format="dimension" />
+        <attr name="stl_underlineColor" format="color" />
+        <attr name="stl_underlineThickness" format="dimension" />
+        <attr name="stl_dividerColor" format="color" />
+        <attr name="stl_dividerColors" format="reference" />
+        <attr name="stl_dividerThickness" format="dimension" />
+        <attr name="stl_defaultTabBackground" format="reference" />
+        <attr name="stl_defaultTabTextAllCaps" format="boolean" />
+        <attr name="stl_defaultTabTextColor" format="color|reference" />
+        <attr name="stl_defaultTabTextSize" format="dimension" />
+        <attr name="stl_defaultTabTextHorizontalPadding" format="dimension" />
+        <attr name="stl_defaultTabTextMinWidth" format="dimension" />
+        <attr name="stl_customTabTextLayoutId" format="reference" />
+        <attr name="stl_customTabTextViewId" format="reference" />
+        <attr name="stl_distributeEvenly" format="boolean" />
+        <attr name="stl_clickable" format="boolean" />
+        <attr name="stl_titleOffset" format="dimension">
+            <enum name="auto_center" value="-1" />
+        </attr>
+        <attr name="stl_drawDecorationAfterTab" format="boolean" />
+    </declare-styleable>
+
+    <!--bottom bar attrs-->
+    <declare-styleable name="BottomBar">
+        <attr name="bb_tabXmlResource" format="reference" />
+        <attr name="bb_tabletMode" format="boolean" />
+        <attr name="bb_behavior">
+            <flag name="shifting" value="1" />
+            <flag name="shy" value="2" />
+            <flag name="underNavbar" value="4" />
+            <flag name="iconsOnly" value="8" />
+        </attr>
+        <attr name="bb_longPressHintsEnabled" format="boolean" />
+        <attr name="bb_inActiveTabAlpha" format="float" />
+        <attr name="bb_activeTabAlpha" format="float" />
+        <attr name="bb_inActiveTabColor" format="color" />
+        <attr name="bb_activeTabColor" format="color" />
+        <attr name="bb_badgeBackgroundColor" format="color" />
+        <attr name="bb_badgesHideWhenActive" format="boolean" />
+        <attr name="bb_titleTextAppearance" format="reference" />
+        <attr name="bb_titleTypeFace" format="string" />
+        <attr name="bb_showShadow" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <!-- {@deprecated Use civ_circlebackground_color instead.} -->
+        <attr name="civ_fill_color" format="color" />
+        <attr name="civ_circle_background_color" format="color" />
+    </declare-styleable>
+
+    <!--带清除按钮的EditText-->
+    <declare-styleable name="ClearEditText">
+        <!-- 清除按钮显示模式 -->
+        <attr name="clearButtonMode">
+            <!--不显示清空按钮-->
+            <enum name="never" value="0" />
+            <!--不为空，获得焦点与没有获得焦点都显示清空按钮-->
+            <enum name="always" value="1" />
+            <!--不为空，且在编辑状态时（及获得焦点）显示清空按钮-->
+            <enum name="whileEditing" value="2" />
+            <!--不为空，且不在编译状态时（焦点不在输入框上）显示清空按钮-->
+            <enum name="unlessEditing" value="3" />
+        </attr>
+        <attr name="clearButtonDrawable" format="reference" />
+    </declare-styleable>
+
+    <!--切换按钮-->
+    <declare-styleable name="SwitchMultiButton">
+        <attr name="strokeRadius" format="dimension" />
+        <attr name="strokeWidth" format="dimension" />
+        <attr name="textSize" format="dimension" />
+        <attr name="selectedTab" format="integer" />
+        <attr name="selectedColor" format="color|reference" />
+        <attr name="switchTabs" format="reference" />
+        <attr name="typeface" format="string" />
+    </declare-styleable>
+
+
+    <!--viewpager指示器关联-->
+    <declare-styleable name="IndicatorView">
+        <!-- 设置指示器显示的总个数 -->
+        <attr name="indicator_count" format="integer" />
+        <!-- 指示器绘图的默认颜色 -->
+        <attr name="indicator_color" format="reference|color" />
+        <!-- 指示器绘图的select形式，会覆盖indicator_color设置的值-->
+        <attr name="indicator_drawable" format="reference" />
+        <!-- 指示器绘图的半径 -->
+        <attr name="indicator_radius" format="reference|dimension" />
+        <!-- 指示器绘图的选中时放缩比例 -->
+        <attr name="indicator_select_scale" format="float" />
+        <!-- 指示器默认选中的单元 -->
+        <attr name="indicator_select" format="integer" />
+    </declare-styleable>
+
+    <!--tab切换-->
+    <declare-styleable name="NavigationTabStrip">
+        <attr name="nts_color" format="color"/>
+        <attr name="nts_size" format="dimension"/>
+        <attr name="nts_weight" format="dimension"/>
+        <attr name="nts_factor" format="float"/>
+        <attr name="nts_titles" format="reference"/>
+
+        <attr name="nts_type" format="enum">
+            <enum name="line" value="0"/>
+            <enum name="point" value="1"/>
+        </attr>
+        <attr name="nts_gravity" format="enum">
+            <enum name="bottom" value="0"/>
+            <enum name="top" value="1"/>
+        </attr>
+
+        <attr name="nts_typeface" format="string"/>
+        <attr name="nts_corners_radius" format="dimension"/>
+        <attr name="nts_animation_duration" format="integer"/>
+
+        <attr name="nts_inactive_color" format="color"/>
+        <attr name="nts_active_color" format="color"/>
+    </declare-styleable>
+
+
+    <!--自定义属性 -->
+    <declare-styleable name="ClipViewLayout">
+        <attr name="clipType" format="enum">
+            <enum name="circle" value="1" />
+            <enum name="rectangle" value="2" />
+        </attr>
+        <attr name="mHorizontalPadding" format="dimension" />
+        <attr name="clipBorderWidth" format="dimension" />
+    </declare-styleable>
+
+
+    <declare-styleable name="NumberProgressBar">
+        <attr name="progress_current" format="integer"/>
+        <attr name="progress_max" format="integer"/>
+        <attr name="progress_unreached_color" format="color"/>
+        <attr name="progress_is_circle_shape" format="boolean"/>
+        <attr name="progress_reached_color" format="color"/>
+        <attr name="progress_reached_bar_height" format="dimension"/>
+        <attr name="progress_unreached_bar_height" format="dimension"/>
+        <attr name="progress_text_size" format="dimension"/>
+        <attr name="progress_text_color" format="color"/>
+        <attr name="progress_text_offset" format="dimension"/>
+        <attr name="progress_text_custom" format="boolean"/>
+        <attr name="progress_text_visibility" format="enum">
+            <enum name="visible" value="0"/>
+            <enum name="invisible" value="1"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="Themes">
+        <attr name="numberProgressBarStyle" format="reference"/>
+    </declare-styleable>
+
+    <!--可悬浮的expendlistview属性-->
+    <declare-styleable name="PinnerExpendListView">
+        <attr name="collaps_enable" format="boolean"></attr>
+    </declare-styleable>
+
+</resources>

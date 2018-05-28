@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/tab_bill"
+        icon="@drawable/ic_bill_selector"
+        title="@string/text_bill" />
+    <tab
+        id="@+id/tab_chart"
+        icon="@drawable/ic_chart_selector"
+        title="@string/text_chart" />
+    <tab
+        id="@+id/tab_record"
+        icon="@drawable/ic_record_selector" />
+    <tab
+        id="@+id/tab_calender"
+        icon="@drawable/ic_calendar_selector"
+        size="10sp"
+        title="@string/text_calender" />
+    <tab
+        id="@+id/tab_mine"
+        icon="@drawable/ic_mine_selector"
+        title="@string/text_mine" />
+</tabs>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view_divide"
+        style="@style/horizontal_line_no_padding" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="57dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:gravity="center">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="2dp">
+
+                    <TextView
+                        android:id="@+id/txt_month"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:gravity="center|left"
+                        android:paddingLeft="15dp"
+                        android:text="06"
+                        android:textColor="@color/h10"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2">
+
+                        <cn.ftoutiao.account.android.widget.progressbar.NumberProgressBar
+                            android:id="@+id/pro_input"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            app:progress_current="0"
+                            app:progress_is_circle_shape="false"
+                            app:progress_reached_bar_height="13dp"
+                            app:progress_reached_color="#78dcb6"
+                            app:progress_text_color="@color/h11"
+                            app:progress_text_visibility="invisible"
+                            app:progress_text_custom="false"
+                            app:progress_unreached_bar_height="0dp"
+                            app:progress_unreached_color="#00000000" />
+
+                        <TextView
+                            android:id="@+id/txt_input_total"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:gravity="center|left"
+                            android:paddingLeft="7dp"
+                            android:text="总收入"
+                            android:textColor="@color/white"
+                            android:textSize="9sp" />
+
+
+                    </FrameLayout>
+
+
+                    <TextView
+                        android:paddingRight="15dp"
+                        android:id="@+id/txt_dif_total"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center|right"
+                        android:text=""
+                        android:textColor="#33c58d"
+                        android:textSize="10sp" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="2dp">
+
+                    <TextView
+                        android:id="@+id/txt_year"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:gravity="center|left"
+                        android:paddingLeft="15dp"
+                        android:text="2018"
+                        android:textColor="@color/h17"
+                        android:textSize="9sp" />
+
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2">
+
+                        <cn.ftoutiao.account.android.widget.progressbar.NumberProgressBar
+                            android:id="@+id/pro_output"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            app:progress_current="0"
+                            app:progress_is_circle_shape="false"
+                            app:progress_reached_bar_height="15dp"
+                            app:progress_reached_color="#9e8bbb"
+                            app:progress_text_color="@color/h11"
+                            app:progress_text_visibility="invisible"
+                            app:progress_unreached_bar_height="0dp"
+                            app:progress_unreached_color="#00000000" />
+
+                        <TextView
+                            android:id="@+id/txt_output_total"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center|left"
+                            android:paddingLeft="7dp"
+                            android:text="支出"
+                            android:textColor="@color/white"
+                            android:textSize="9sp" />
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:paddingRight="15dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center|right"
+                        android:text="结余"
+                        android:textColor="@color/h12"
+                        android:textSize="9sp" />
+
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:paddingRight="9dp"
+            android:src="@drawable/icon_arrow_r" />
+
+    </LinearLayout>
+
+
+    <View style="@style/horizontal_line_no_padding" />
+
+
+</LinearLayout>

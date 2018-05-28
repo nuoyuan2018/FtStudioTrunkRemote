@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <cn.ftoutiao.account.android.widget.NavigationTabStrip
+            android:id="@+id/nts_top"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            app:nts_active_color="@color/white"
+            app:nts_color="@color/white"
+            app:nts_corners_radius="1dp"
+            app:nts_factor="1.8"
+            app:nts_inactive_color="#b3b0b8"
+            app:nts_size="16sp"
+            app:nts_titles="@array/titles"
+            app:nts_weight="3dp" />
+
+    </FrameLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <cn.ftoutiao.account.android.widget.SwitchMultiButton
+                android:id="@+id/switchBtn"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="14dp"
+                app:selectedColor="@color/switchselectedcolor"
+                app:strokeRadius="4dp"
+                app:strokeWidth="1dp"
+                app:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txt_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center|left"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:text="累计支出总额"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_tipss"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:text="暂无总支出排行榜" />
+
+                <include
+                    android:id="@+id/include"
+                    layout="@layout/view_vertify" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/line_tips"
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+                android:background="#f6f6f6"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/fra_float"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view">
+
+                <TextView
+                    android:id="@+id/txt_monthtips"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:textSize="12sp"
+                    android:text="本月支出排行榜"
+                    android:textColor="@color/h10" />
+
+                <TextView
+                    android:id="@+id/txt_monthtips_value"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:gravity="center|right"
+                    android:paddingRight="18dp"
+                    android:textColor="@color/h10"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:minHeight="200dp"
+                android:background="@color/white"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycleView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/txt_tips"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="暂无总支出排行榜" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

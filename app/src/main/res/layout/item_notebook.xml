@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingTop="12dp">
+
+    <FrameLayout
+        android:layout_width="80dp"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/txt_category_icon"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:src="@drawable/school_selector" />
+
+        <ImageView
+            android:id="@+id/img_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/icon_selet_notebook"
+            />
+
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/txt_category_value"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="类别"
+        android:textColor="@color/h11" />
+
+</LinearLayout>

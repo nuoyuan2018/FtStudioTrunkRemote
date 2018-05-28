@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/line_bar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/topbar_height"
+    android:background="@color/colorPrimary">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/img_pre_month"
+            android:layout_width="44dp"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@+id/imageView"
+            android:padding="15dp"
+            android:src="@drawable/left_selector" />
+
+        <TextView
+            android:id="@+id/txt_current_selected_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-5dp"
+            android:layout_marginRight="-5dp"
+            android:gravity="center"
+            android:text="2018年10月"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_16sp" />
+
+        <ImageView
+            android:id="@+id/img_next_month"
+            android:layout_width="44dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:padding="15dp"
+            android:src="@drawable/right_selector" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_add_task"
+        android:layout_width="44dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="10dp"
+        android:padding="15dp"
+        android:src="@drawable/add_selector" />
+</RelativeLayout>

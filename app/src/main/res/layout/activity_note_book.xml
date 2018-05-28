@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.ftoutiao.account.android.activity.notebook.NoteBookActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/view_top_switch_bar" />
+
+        <View style="@style/horizontal_line_no_padding" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:paddingLeft="14dp">
+
+            <ImageView
+                android:id="@+id/img_selected_note"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_avatar" />
+
+            <TextView
+                android:id="@+id/txt_note_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/h15" />
+
+            <EditText
+                android:id="@+id/edt_caculator"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:focusable="true"
+                android:gravity="right|center"
+                android:hint="￥0.00"
+                android:inputType="text"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="@color/text_49cb99"
+                android:textColorHint="@color/text_49cb99"
+                android:textSize="22dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <cn.ftoutiao.account.android.activity.notebook.viewpager.GridViewPager
+                android:id="@+id/myviewpager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/line_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <cn.junhua.android.view.IndicatorView
+                    android:id="@+id/indicator_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    app:indicator_color="@color/text_aeaeae"
+                    app:indicator_drawable="@drawable/trans" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:paddingLeft="18dp">
+
+            <TextView
+                android:id="@+id/txt_adate"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/btn_with_gray_border"
+                android:gravity="center"
+                android:minWidth="54dp"
+                android:text="02月17日"
+                android:textColor="#666666" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="18dp"
+                android:layout_toRightOf="@+id/txt_adate"
+                android:gravity="center|left"
+                android:orientation="vertical">
+
+                <EditText
+                    android:paddingRight="15dp"
+                    android:id="@+id/edt_descript"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="left|center"
+                    android:hint="@string/saywhat"
+                    android:maxLength="50"
+                    android:inputType="text"
+                    android:textColorHint="#a7a7a7"
+                    android:textSize="12dp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_marginLeft="70dp"
+                android:layout_marginRight="15dp"
+                style="@style/horizontal_line_no_padding"
+                android:layout_alignParentBottom="true" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <android.inputmethodservice.KeyboardView
+        android:id="@+id/keyboard_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#453f4d"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:keyBackground="@drawable/shuzi_selector"
+        android:keyTextColor="@color/white"
+        android:keyTextSize="20sp"
+        android:shadowColor="#FFFFFF" />
+</RelativeLayout>

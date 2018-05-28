@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/line_default"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingTop="15dp">
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/line_contentbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_changetips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:text="00，支出总额"
+            />
+
+        <TextView
+            android:id="@+id/txt_type_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0.00"
+            android:textColor="#584f62"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/line_inputoroutput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:id="@+id/line_output"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_out"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="完成笔数"
+                    android:textColor="@color/h17"
+                    android:textSize="@dimen/text_11sp" />
+
+                <TextView
+                    android:id="@+id/txt_out_tip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="15笔"
+                    android:textColor="@color/color_584f62" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/line_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_intput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="数额最大"
+                    android:textColor="@color/h17"
+                    android:textSize="@dimen/text_11sp" />
+
+                <TextView
+                    android:id="@+id/txt_intput_tip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="148.00元"
+                    android:textColor="@color/color_584f62" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <cn.ftoutiao.account.android.widget.AutoLocateHorizontalView
+            android:layout_marginTop="15dp"
+            android:id="@+id/auto_locate_horizontal_view"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/include" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+       >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0.00"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:text="嗨～您的海豚记账之旅还没有开始呢"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center">
+
+            <View
+                android:layout_width="24dp"
+                android:layout_height="92dp"
+                android:background="#cdf3e4" />
+
+            <View
+                android:layout_width="24dp"
+                android:layout_height="92dp"
+                android:layout_marginLeft="9dp"
+                android:background="#cdf3e4" />
+
+            <View
+                android:layout_width="24dp"
+                android:layout_height="92dp"
+                android:layout_marginLeft="9dp"
+                android:background="#cdf3e4" />
+
+            <View
+                android:layout_width="24dp"
+                android:layout_height="92dp"
+                android:layout_marginLeft="9dp"
+                android:background="#cdf3e4" />
+
+            <View
+                android:layout_width="24dp"
+                android:layout_height="92dp"
+                android:layout_marginLeft="9dp"
+                android:background="#cdf3e4" />
+
+            <View
+                android:layout_width="24dp"
+                android:layout_height="92dp"
+                android:layout_marginLeft="9dp"
+                android:background="#cdf3e4" />
+
+            <View
+                android:layout_width="24dp"
+                android:layout_height="92dp"
+                android:layout_marginLeft="9dp"
+                android:background="#cdf3e4" />
+
+            <View
+                android:layout_width="24dp"
+                android:layout_height="92dp"
+                android:layout_marginLeft="9dp"
+                android:background="#cdf3e4" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/horizontal_line_no_padding"
+            android:layout_marginTop="23dp"
+            android:background="#e5e5e5" />
+    </LinearLayout>
+</LinearLayout>

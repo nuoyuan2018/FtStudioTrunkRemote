@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ComponentLib/ComponentLib.iml" filepath="$PROJECT_DIR$/ComponentLib/ComponentLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CoreLib/CoreLib.iml" filepath="$PROJECT_DIR$/CoreLib/CoreLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FtStudioTrunkRemote.iml" filepath="$PROJECT_DIR$/FtStudioTrunkRemote.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+    </modules>
+  </component>
+</project>

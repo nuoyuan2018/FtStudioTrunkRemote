@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.ftoutiao.account.android.activity.notebook.AddCategoryActivity">
+
+    <include
+        android:id="@+id/topbar"
+        layout="@layout/view_simple_com"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        app:layout_constraintBottom_toTopOf="@+id/view1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:id="@+id/view1"
+        style="@style/horizontal_line_no_padding"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/white"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/topbar">
+
+        <TextView
+            android:id="@+id/txt_note_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11dp"
+            android:gravity="center"
+            android:text="账本名称"
+            android:textSize="@dimen/sp_15"
+            android:textColor="@color/h10" />
+
+        <EditText
+            android:id="@+id/edt_caculator"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:maxLength="6"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="right|center"
+            android:hint="请输入账本名称"
+            android:inputType="text"
+            android:paddingLeft="15dp"
+            android:textSize="@dimen/sp_15"
+            android:paddingRight="20dp"
+            android:textColorHint="#cccccc" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        style="@style/horizontal_line_no_padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <GridView
+        android:id="@+id/grid_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numColumns="4"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+</android.support.constraint.ConstraintLayout>

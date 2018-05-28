@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/actionbar_default" />
+
+
+    <cn.ftoutiao.account.android.widget.DragGridView
+        android:id="@+id/drag_grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/space_15dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:horizontalSpacing="10dp"
+        android:numColumns="5"
+        android:scrollbars="vertical"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp"
+        tools:listitem="@layout/item_drag_gridview" />
+
+
+</LinearLayout>

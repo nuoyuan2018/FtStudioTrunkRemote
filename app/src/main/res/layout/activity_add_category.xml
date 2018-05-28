@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <cn.ftoutiao.account.android.utils.TopBar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:background="@color/white"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/img_selected_note"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/ic_avatar" />
+
+        <TextView
+            android:id="@+id/txt_note_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:text="吃喝"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/edt_caculator"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="right|center"
+            android:hint="请输入分类"
+            android:inputType="text"
+            android:maxLength="4"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textColorHint="#b4b4b4"
+            android:textSize="@dimen/text_15sp" />
+
+    </LinearLayout>
+
+    <View style="@style/horizontal_line_no_padding" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <cn.ftoutiao.account.android.utils.MesureGrid
+            android:id="@+id/grid_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:horizontalSpacing="10dp"
+            android:numColumns="5"
+            android:paddingTop="16dp"
+            android:scrollbars="none"
+            android:verticalSpacing="16dp" />
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <!--<GridView-->
+    <!--android:id="@+id/grid_view"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:columnWidth="35dp"-->
+    <!--android:numColumns="5"-->
+    <!--android:paddingBottom="18dp"-->
+    <!--android:paddingLeft="25dp"-->
+    <!--android:paddingRight="25dp"-->
+    <!--android:paddingTop="@dimen/text_18sp"-->
+    <!--android:scrollbars="none"-->
+    <!--android:verticalSpacing="8dp"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/linearLayout" />-->
+
+</LinearLayout>

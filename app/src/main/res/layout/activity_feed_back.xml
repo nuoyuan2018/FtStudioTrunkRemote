@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <cn.ftoutiao.account.android.utils.TopBar
+        android:id="@+id/topBar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/edt_des"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_bg"
+            android:gravity="top|left"
+            android:hint="说点什么..."
+            android:minHeight="150dp"
+            android:textSize="@dimen/sp_14"
+            android:padding="10dp"
+            android:singleLine="false" />
+
+        <TextView
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="15dp"
+            android:id="@+id/txt_surplus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/h11"
+            android:layout_alignParentRight="true"
+            android:text="(0/50)" />
+    </RelativeLayout>
+
+
+</LinearLayout>

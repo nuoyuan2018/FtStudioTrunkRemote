@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.acmenxd.recyclerview.group.GroupItemLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:id="@+id/img_category"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/img_editor_del"
+            android:src="@drawable/ic_avatar" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="55dp"
+            android:layout_toRightOf="@+id/img_bg"
+            android:gravity="center|left"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="title"
+                android:textColor="@color/h15"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txt_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/txt_title"
+                android:paddingTop="2dp"
+                android:ellipsize="end"
+                android:text="@string/testText"
+                android:singleLine="true"
+                android:textColor="@color/h17"
+                android:textSize="@dimen/text_12sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txt_count"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:gravity="right|center"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_17sp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/view"
+            style="@style/horizontal_line"
+            android:layout_alignParentTop="true" />
+    </RelativeLayout>
+
+</com.acmenxd.recyclerview.group.GroupItemLayout>

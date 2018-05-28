@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--bottom bar colors-->
+    <color name="bb_inActiveBottomBarItemColor">#747474</color>
+    <color name="bb_darkBackgroundColor">#212121</color>
+    <color name="bb_tabletRightBorderDark">#505050</color>
+
+    <color name="colorPrimary">#574f62</color>
+    <color name="colorPrimaryDark">#574f62</color>
+    <color name="colorAccent">#4aca9a</color>
+
+    <color name="background">#f8f8f8</color>
+
+    <color name="divider">#e5e5e5</color>
+
+    <color name="text_4aca9a">#4aca9a</color>
+    <color name="text_aaaaaa">#aaaaaa</color>
+    <color name="text_666666">#666666</color>
+    <color name="text_999999">#999999</color>
+    <color name="text_49cb99">#49cb99</color>
+
+</resources>

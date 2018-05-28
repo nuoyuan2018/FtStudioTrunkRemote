@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.ftoutiao.account.android.activity.mine.AccountActivity">
+
+
+    <cn.ftoutiao.account.android.utils.TopBar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_borrow_record"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:clickable="true"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topbar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:text="@string/uc_head"
+            android:textColor="@color/h11"
+            android:textSize="@dimen/text_14sp" />
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="right|center"
+            android:orientation="horizontal">
+
+            <cn.ftoutiao.account.android.activity.mine.view.CircleImageView
+                android:id="@+id/circle_img"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_avatar" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/ic_entry" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="15dp"
+            android:background="@color/color_eee" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_deal_record"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl_borrow_record">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:text="@string/uc_nick_name"
+            android:textColor="@color/h11"
+            android:textSize="@dimen/text_14sp" />
+
+        <ImageView
+            android:id="@+id/iv_deal_record"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_entry" />
+
+        <TextView
+            android:id="@+id/tv_deal_count"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/iv_deal_record"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#aaaaaa"
+            android:textSize="@dimen/text_14sp" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_callback"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/white"
+        android:drawableRight="@drawable/ic_entry"
+        android:gravity="left|center"
+        android:paddingLeft="@dimen/padding_15dp"
+        android:paddingRight="15dp"
+        android:text="@string/uc_modify_pwd"
+        android:textColor="@color/h11"
+        android:textSize="@dimen/text_14dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl_deal_record" />
+
+
+    <Button
+        android:id="@+id/btn_exit"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/com_height"
+        android:layout_below="@id/rl_input"
+        android:layout_marginBottom="36dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:background="@drawable/bg_btn_selector"
+        android:enabled="false"
+        android:gravity="center"
+        android:text="@string/uc_exit_load"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

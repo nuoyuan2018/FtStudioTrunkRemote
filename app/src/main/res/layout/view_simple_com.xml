@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/topbar_height"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/txt_cancel"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingLeft="10dp"
+        android:gravity="center|left"
+        android:textColor="@color/h10"
+        android:text="取消" />
+
+    <TextView
+        android:id="@+id/txt_mid"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/h10"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/txt_right_btn"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.7"
+        android:gravity="center"
+        android:textColor="#b3666666"
+        android:text="保存" />
+
+</LinearLayout>

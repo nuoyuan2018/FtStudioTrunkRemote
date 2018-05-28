@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/topbar"
+        layout="@layout/view_simple_com"
+        android:layout_width="match_parent"
+        android:layout_height="44dp" />
+
+    <View
+        android:id="@+id/fill"
+        style="@style/horizontal_line_no_padding"
+        android:layout_below="@id/topbar" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/fill"
+        android:layout_marginBottom="50dp" />
+
+    <View
+        android:id="@+id/view"
+        style="@style/horizontal_line_no_padding"
+        android:layout_above="@+id/line_editor" />
+
+    <LinearLayout
+        android:id="@+id/line_editor"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/txt_editor"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/nookbook_b_editor__selector"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="编辑"
+                android:textColor="@color/text_49cb99" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/txt_add_item"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/nookbook_b_add__selector"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="新建"
+                android:textColor="@color/text_49cb99" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/txt_commple"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="完成"
+            android:textColor="@color/text_49cb99"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</RelativeLayout>

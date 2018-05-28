@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/include"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/topbar_height"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/txt_editor"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:padding="10.4dp"
+            android:src="@drawable/com_back_selector2" />
+
+        <cn.ftoutiao.account.android.widget.SwitchMultiButton
+            android:id="@+id/switchBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_weight="2"
+            android:paddingBottom="4dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="4dp"
+            app:selectedColor="@color/switchselectedcolor"
+            app:selectedTab="1"
+            app:strokeRadius="5dp"
+            app:strokeWidth="1dp"
+            app:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txt_add_item"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/complete"
+            android:textColor="@color/h10" />
+    </LinearLayout>
+
+    <View style="@style/horizontal_line_no_padding" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:background="@color/f3f3f3"
+                android:gravity="left|center"
+                android:paddingLeft="15dp"
+                android:text="@string/longclicksort"
+                android:textColor="@color/h11"
+                android:textSize="13sp" />
+
+            <cn.ftoutiao.account.android.utils.MesureGrid
+                android:id="@+id/grid_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:numColumns="5"
+                android:paddingTop="10dp"
+                android:scrollbars="none"
+                android:listSelector="@drawable/trans"
+                android:verticalSpacing="10dp"
+                tools:listitem="@layout/notebook_gridview_item" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:background="@color/f3f3f3"
+                android:gravity="left|center"
+                android:paddingLeft="15dp"
+                android:text="@string/other_sort"
+                android:textColor="@color/h11"
+                android:textSize="13sp" />
+
+            <cn.ftoutiao.account.android.utils.MesureGrid
+                android:id="@+id/add_grid_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:numColumns="5"
+                android:paddingTop="10dp"
+                android:listSelector="@drawable/trans"
+                android:scrollbars="none"
+                android:verticalSpacing="10dp" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>
+

@@ -1,0 +1,125 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:actionMenuTextColor">@color/white</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="BkCardListDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+
+    <style name="AppTheme.ActionBar" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="actionMenuTextColor">@android:color/white</item>
+        <item name="actionMenuTextAppearance">@style/AppTheme.ActionBar.MenuTextStyle</item>
+    </style>
+
+    <style name="AppTheme.ActionBar.MenuTextStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Menu">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Splash" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <!--TODO: change color to icon-->
+        <!--//<item name="android:windowBackground">@color/colorPrimaryDark</item>-->
+        <item name="android:windowAnimationStyle">@style/NoAnimation</item>
+        <item name="android:windowBackground">@drawable/splash</item>
+    </style>
+
+    <style name="NoAnimation">
+        <item name="android:activityOpenEnterAnimation">@null</item>
+        <item name="android:activityOpenExitAnimation">@null</item>
+        <item name="android:activityCloseEnterAnimation">@null</item>
+        <item name="android:activityCloseExitAnimation">@null</item>
+        <item name="android:taskOpenEnterAnimation">@null</item>
+        <item name="android:taskOpenExitAnimation">@null</item>
+        <item name="android:taskCloseEnterAnimation">@null</item>
+        <item name="android:taskCloseExitAnimation">@null</item>
+        <item name="android:taskToFrontEnterAnimation">@null</item>
+        <item name="android:taskToFrontExitAnimation">@null</item>
+        <item name="android:taskToBackEnterAnimation">@null</item>
+        <item name="android:taskToBackExitAnimation">@null</item>
+    </style>
+
+    <!--bottom bar def style-->
+    <style name="BB_BottomBarItem">
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:layout_width">wrap_content</item>
+        <!-- layout_height is ignored since the height is set programmatically in BottomBar
+        .updateItems() -->
+        <item name="android:layout_height">@dimen/bb_height</item>
+    </style>
+
+    <style name="BB_BottomBarItem_TitleStyle">
+        <!-- Material spec: "Avoid long text labels as these labels do not truncate or wrap." -->
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="BB_BottomBarItem_Fixed.TitleAppearance" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="BB_BottomBarItem_Shifting.TitleAppearance" parent="BB_BottomBarItem_Fixed.TitleAppearance">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="BB_BottomBarItem_Tablet">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="BB_BottomBarBadge_Text" parent="TextAppearance.AppCompat.Body2">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="InputTextStyle">
+        <item name="android:background">@null</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">#333333</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColorHint">#aaaaaa</item>
+    </style>
+
+    <style name="horizontal_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:background">#e1e1e1</item>
+    </style>
+
+    <style name="horizontal_line_no_padding">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">#e1e1e1</item>
+    </style>
+
+    <style name="horizontal_line_eeee">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">#e1e1e1</item>
+    </style>
+
+    <!-- 由下滑入dialog 使用 -->
+    <style name="SlipDialogAnimation" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/slip_down_in</item>
+        <item name="android:windowExitAnimation">@anim/slip_down_out</item>
+    </style>
+
+
+
+
+</resources>

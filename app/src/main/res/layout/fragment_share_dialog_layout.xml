@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f5f5f5"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="14.5dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/shareDailog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <View
+            android:layout_width="67dp"
+            android:layout_height="0.5dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@+id/shareDailog_title"
+            android:background="@color/color_efefef" />
+
+        <View
+            android:layout_width="67dp"
+            android:layout_height="0.5dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/shareDailog_title"
+            android:background="@color/color_efefef" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:orientation="horizontal"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp">
+
+
+        <LinearLayout
+            android:layout_width="52dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/shareDailog_wxf"
+                android:layout_width="@dimen/share_width"
+                android:layout_height="@dimen/share_height"
+                android:background="@drawable/share_wx_nor" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:gravity="center_horizontal"
+                android:text="@string/wechat"
+                android:textColor="@color/color_444444"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="52dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/shareDailog_wxq"
+                android:layout_width="@dimen/share_width"
+                android:layout_height="@dimen/share_height"
+                android:background="@drawable/share_wx_friends_nor" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:gravity="center_horizontal"
+                android:text="@string/umeng_socialize_text_weixin_circle_key"
+                android:textColor="@color/color_444444"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="52dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/shareDailog_qqf"
+                android:layout_width="@dimen/share_width"
+                android:layout_height="@dimen/share_height"
+                android:background="@drawable/share_qq_nor" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:gravity="center_horizontal"
+                android:text="@string/umeng_socialize_text_qq_key"
+                android:textColor="@color/color_444444"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <!--<View-->
+    <!--style="@style/horizontal_efefe_line"-->
+    <!--android:layout_marginRight="15dp"-->
+    <!--android:layout_marginLeft="15dp"-->
+    <!--android:layout_marginTop="15dp"-->
+    <!--android:visibility="visible"-->
+    <!--/>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:orientation="horizontal"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:visibility="visible">
+
+
+        <LinearLayout
+            android:layout_width="52dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/shareDailog_qqk"
+                android:layout_width="@dimen/share_width"
+                android:layout_height="@dimen/share_height"
+                android:background="@drawable/share_qzone_friends_nor" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:gravity="center_horizontal"
+                android:text="@string/umeng_socialize_text_qq_zone_key"
+                android:textColor="@color/color_444444"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="52dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/shareDailog_sina"
+                android:layout_width="@dimen/share_width"
+                android:layout_height="@dimen/share_height"
+                android:background="@drawable/share_weibo_nor" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:gravity="center_horizontal"
+                android:text="@string/umeng_socialize_text_sina_key"
+                android:textColor="@color/color_444444"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="52dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:orientation="vertical" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/divider"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/shareDailog_cancle"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="23dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="@string/cancel"
+        android:textColor="@color/color_666666"
+        android:textSize="15sp" />
+</LinearLayout>
