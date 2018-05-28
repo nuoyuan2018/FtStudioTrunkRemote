@@ -37,7 +37,7 @@ public final class AppConfig {
      * 调试模式开关
      * * 由build.gradle -> debug | release版本控制
      */
-    public static final boolean DEBUG = BuildConfig.MAIN_DEBUG;
+    public static final boolean DEBUG =true;
     /**
      * 项目整体配置信息
      */

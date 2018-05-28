@@ -15,7 +15,6 @@ import java.io.Serializable;
 
 import cn.ftoutiao.account.android.activity.MainActivity;
 import cn.ftoutiao.account.android.activity.login.LoginActivity;
-import cn.ftoutiao.account.android.activity.webview.WebActivity;
 import cn.ftoutiao.account.android.utils.StringUtil;
 import cn.ftoutiao.account.android.widget.webview.bean.WebBankBean;
 import cn.ftoutiao.account.android.widget.webview.bean.WebSendMessageBean;
@@ -237,14 +236,10 @@ public class WebJsBridge implements Serializable {
         } else {
             Toaster.show("招行充值鉴权失败");
         }
-        if (mActivity instanceof WebActivity) mActivity.finish();
-        Logger.d("js调用Android", "certificate_result -- finish");
     }
 
     private void toApplogin(JsonObject param) {
         Logger.d("js调用Android", "tologin -- parse param==" + param.toString());
-        //TODO  登录还要回到当前页面，目前需要登录页面和从哪来到哪里去的业务完善后完成
-        String loadUrl = ((WebActivity) mActivity).getWebView().getUrl();
         Intent intent = new Intent(mActivity, LoginActivity.class);
 //        intent.putExtra(ComKey.WEB_LOGIN_TYPE, ComKey.WEB_LOGIN_TYPE);
 //        intent.putExtra(ComKey.WEB_URL, loadUrl);
@@ -309,7 +304,6 @@ public class WebJsBridge implements Serializable {
         }
         if (param.endsWith(",")) param = param.substring(0, param.length() - 1);
         String fuc = "javascript:" + funcName + "(" + param + ")";
-        ((WebActivity) mActivity).getWebView().loadUrl(fuc);
         Logger.d("js调用Android", "----请求调用js方法:----" + fuc);
     }
 

@@ -13,7 +13,6 @@ import com.google.gson.JsonParser;
 
 import java.io.Serializable;
 
-import cn.ftoutiao.account.android.activity.webview.WebActivity;
 import cn.ftoutiao.account.android.utils.StringUtil;
 
 /**
@@ -71,18 +70,12 @@ public class BankJavascriptBridge implements Serializable {
 //                        successI.putExtra("incert", iscert);
 //                        successI.setClass(mContext, RechargeActivity.class);
                         // mContext.startActivity(successI);
-                        if (mContext instanceof WebActivity) {
-                            mContext.finish();
-                        }
                         break;
                     default:
                         // TODO: 2016/6/30 逻辑以后完善
 //                        Intent faileI = new Intent();
 //                        faileI.setClass(mContext, RechargeActivity.class);
                         // mContext.startActivity(faileI);
-                        if (mContext instanceof WebActivity) {
-                            mContext.finish();
-                        }
                         break;
                 }
             }

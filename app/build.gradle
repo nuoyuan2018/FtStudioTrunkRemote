@@ -30,43 +30,6 @@ android {
     }
 
 
-
-
-    signingConfigs {
-        releaseConfig {
-            storeFile file("../jks/accountbookKey.jks")
-            storePassword "ftoutiao*&account"
-            keyAlias "accountbookKey"
-            keyPassword "ftoutiao*&account"
-            v2SigningEnabled false
-        }
-
-    }
-
-
-    buildTypes {
-        debug {
-            buildConfigField "boolean", "MAIN_DEBUG", "true" // 调试总开关
-            minifyEnabled false     //混淆
-            zipAlignEnabled false   //zipalign压缩对齐
-            shrinkResources false   //移除无用的资源
-            //前一部分代表系统默认的android程序的混淆文件，该文件已经包含了基本的混淆声明，后一个文件是自己的定义混淆文件
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.releaseConfig //debug签名配置
-        }
-        release {
-            buildConfigField "boolean", "MAIN_DEBUG", "false" // 调试总开关
-            minifyEnabled false     //混淆
-            zipAlignEnabled false   //zipalign压缩对齐
-            shrinkResources false   //移除无用的资源
-            //前一部分代表系统默认的android程序的混淆文件，该文件已经包含了基本的混淆声明，后一个文件是自己的定义混淆文件
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.releaseConfig //release签名配置
-        }
-
-
-    }
-
     applicationVariants.all { variant ->
         variant.outputs.all {
             def newName
