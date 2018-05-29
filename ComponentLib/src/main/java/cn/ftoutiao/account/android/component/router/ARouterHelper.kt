@@ -10,8 +10,8 @@ import com.alibaba.android.arouter.launcher.ARouter
 
 object ARouterHelper {
 
-    fun <T : IProvider> getServiceByPath(path: String): T =
-            ARouter.getInstance().build(path).navigation() as T
+    fun <T : IProvider> getServiceByPath(path: String): Any? =
+            ARouter.getInstance().build(path).navigation()
 
     fun <T : IProvider> getServiceByClass(clz: Class<T>): T = ARouter.getInstance().navigation(clz)
 
