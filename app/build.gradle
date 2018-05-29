@@ -97,6 +97,6 @@ dependencies {
     //compile 'com.umeng.sdk:common:latest.integration'
     //compile 'com.umeng.sdk:analytics:latest.integration'
     //compile 'com.umeng.sdk:debug:1.0.0'
-   // implementation project(':push')
+    // implementation project(':push')
     implementation project(':ComponentLib')
 }

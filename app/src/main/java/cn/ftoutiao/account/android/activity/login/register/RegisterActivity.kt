@@ -12,7 +12,7 @@ import android.widget.CompoundButton
 import android.widget.Toast
 import cn.ftoutiao.account.android.R
 import cn.ftoutiao.account.android.activity.login.register.RegisterPresenter
-import cn.ftoutiao.account.android.activity.webview.WebActivity
+//import cn.ftoutiao.account.android.activity.webview.WebActivity
 import cn.ftoutiao.account.android.base.BaseActivity
 import cn.ftoutiao.account.android.base.EventBusHelper
 import cn.ftoutiao.account.android.constants.ConstanPool
@@ -161,10 +161,10 @@ class RegisterActivity : BaseActivity(), TextWatcher, View.OnClickListener,
         super.onDestroy()
     }
 
-    fun actionServiceProtocol(view: View) {
-        var intent = Intent(this, WebActivity::class.java)
-        intent.putExtra(ConstanPool.WEB_TITLE, getString(R.string.uc_user_protocol))
-        intent.putExtra(ConstanPool.WEB_URL, "http://account.ftoutiao.cn/app/privacy.html")
-        startActivity(intent)
-    }
+//    fun actionServiceProtocol(view: View) {
+//        var intent = Intent(this, WebActivity::class.java)
+//        intent.putExtra(ConstanPool.WEB_TITLE, getString(R.string.uc_user_protocol))
+//        intent.putExtra(ConstanPool.WEB_URL, "http://account.ftoutiao.cn/app/privacy.html")
+//        startActivity(intent)
+//    }
 }
