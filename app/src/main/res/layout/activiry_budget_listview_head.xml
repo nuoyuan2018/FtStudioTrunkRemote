@@ -4,12 +4,7 @@
     android:layout_height="match_parent"
     android:background="@color/color_eee"
     android:orientation="vertical">
-
-    <include
-        android:id="@+id/com_bar"
-        layout="@layout/view_back_com" />
-
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="49dp"
         android:background="@color/white">
@@ -18,39 +13,70 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginLeft="15dp"
-            android:gravity="center"
-            android:text="输入预算金额"
+            android:gravity="center_vertical"
             android:textColor="@color/text_black"
-            android:textSize="15dp" />
+            android:text="开启预算"
+            android:textSize="@dimen/text_15dp" />
 
-        <TextView
-            android:id="@+id/tv_money"
-            android:layout_width="0dp"
+        <RadioButton
+            android:id="@+id/rb_switch"
+            android:layout_width="45dp"
             android:layout_height="match_parent"
-            android:gravity="center_vertical|right"
-            android:layout_marginRight="10dp"
-            android:layout_weight="1"
-            android:textColor="@color/text_black"
-            android:paddingLeft="15dp" />
+            android:layout_alignParentRight="true"
+            android:src="@drawable/button_switch"
+            android:layout_marginRight="15dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="*关闭预算后，首页将显示结算消息" />
+
+    <RelativeLayout
+        android:id="@+id/rl_money"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="@color/white">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_black"
+            android:text="预算金额"
+            android:textSize="@dimen/text_15dp" />
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/iv_entry"
+            android:textColor="@color/text_4aca9a"
+            android:gravity="center_vertical"
+            android:text="--" />
+
+        <ImageView
+            android:id="@+id/iv_entry"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:layout_alignParentRight="true"
             android:layout_marginRight="15dp"
-            android:gravity="center_vertical"
-            android:src="@drawable/ic_entry"
-            android:text="元"
-            android:textColor="@color/text_black"
-            android:textSize="15dp" />
-    </LinearLayout>
+            android:src="@drawable/ic_entry" />
+    </RelativeLayout>
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="13dp" />
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="*预算金额为预算金额减去当月支出" />
 
     <RelativeLayout
-        android:id="@+id/re_month"
+        android:id="@+id/rl_month"
         android:layout_width="match_parent"
         android:layout_height="49dp"
         android:background="@color/white">
@@ -65,14 +91,13 @@
             android:textSize="@dimen/text_15dp" />
 
         <TextView
-            android:id="@+id/tv_month"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginRight="10dp"
             android:layout_toLeftOf="@+id/iv_entry2"
             android:gravity="center_vertical"
-            android:textColor="@color/text_49cb99"
-            android:text="--" />
+            android:textColor="@color/text_4aca9a"
+            android:text="去设置" />
 
         <ImageView
             android:id="@+id/iv_entry2"
@@ -82,17 +107,4 @@
             android:layout_marginRight="15dp"
             android:src="@drawable/ic_entry" />
     </RelativeLayout>
-
-    <TextView
-        android:id="@+id/tv_save"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="23dp"
-        android:background="@drawable/bg_btn_green"
-        android:gravity="center"
-        android:text="保存"
-        android:textColor="@color/white"
-        android:textSize="15dp" />
 </LinearLayout>

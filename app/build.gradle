@@ -78,7 +78,6 @@ greendao {
 
 
 dependencies {
-    def ftoutiaoDependencies = rootProject.ext.ftoutiaoDependencies
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
@@ -99,4 +98,6 @@ dependencies {
     //compile 'com.umeng.sdk:debug:1.0.0'
     // implementation project(':push')
     implementation project(':ComponentLib')
+    implementation project(':CoreLib')
+    compile 'com.contrarywind:Android-PickerView:4.1.3'
 }

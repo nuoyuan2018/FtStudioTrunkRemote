@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_eee"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_money"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/tv_item_month"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_4aca9a"
+            android:text="--"
+            android:textSize="@dimen/text_15dp" />
+
+        <TextView
+            android:id="@+id/tv_item_money"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/iv_item_entry"
+            android:textColor="@color/text_4aca9a"
+            android:gravity="center_vertical"
+            android:text="--" />
+
+        <ImageView
+            android:id="@+id/iv_item_entry"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_entry" />
+    </RelativeLayout>
+</LinearLayout>

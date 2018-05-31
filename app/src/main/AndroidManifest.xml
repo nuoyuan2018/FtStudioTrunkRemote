@@ -53,6 +53,15 @@
             android:name=".activity.login.LoginActivity"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".activity.budget.BudgetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.budget.BudgetEditMoneyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.budget.BudgetEditMonthActivity"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".activity.webview.WebActivity"
             android:screenOrientation="portrait" />
         <activity

@@ -9,6 +9,15 @@
         android:id="@+id/com_bar"
         layout="@layout/view_back_com" />
 
+    <TextView
+        android:id="@+id/tv_month"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical|left"
+        android:text="--"
+        android:paddingLeft="15dp"
+        android:textColor="@color/text_666666"
+        android:layout_height="36dp" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="49dp"
@@ -23,15 +32,18 @@
             android:textColor="@color/text_black"
             android:textSize="15dp" />
 
-        <TextView
-            android:id="@+id/tv_money"
+        <EditText
+            android:id="@+id/ed_money"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:gravity="center_vertical|right"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:textColor="@color/text_black"
-            android:paddingLeft="15dp" />
+            android:background="@null"
+            android:gravity="center_vertical|right"
+            android:paddingLeft="15dp"
+            android:textColor="@color/text_666666"
+            android:text="--"
+             />
 
         <TextView
             android:layout_width="wrap_content"
@@ -44,44 +56,6 @@
             android:textColor="@color/text_black"
             android:textSize="15dp" />
     </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="13dp" />
-
-    <RelativeLayout
-        android:id="@+id/re_month"
-        android:layout_width="match_parent"
-        android:layout_height="49dp"
-        android:background="@color/white">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="15dp"
-            android:gravity="center_vertical"
-            android:text="自定义预算月份"
-            android:textColor="@color/text_black"
-            android:textSize="@dimen/text_15dp" />
-
-        <TextView
-            android:id="@+id/tv_month"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginRight="10dp"
-            android:layout_toLeftOf="@+id/iv_entry2"
-            android:gravity="center_vertical"
-            android:textColor="@color/text_49cb99"
-            android:text="--" />
-
-        <ImageView
-            android:id="@+id/iv_entry2"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="15dp"
-            android:src="@drawable/ic_entry" />
-    </RelativeLayout>
 
     <TextView
         android:id="@+id/tv_save"
